@@ -17,6 +17,14 @@ def move_forward(speed=1):
     else:
         print("Speed must be between 0 and 1.")
 
+# Function to move motors backward at a specified speed
+def move_backward(speed=1):
+    if 0 <= speed <= 1:
+        motor_a.backward(speed)
+        motor_b.backward(speed)
+    else:
+        print("Speed must be between 0 and 1.")
+
 # Function to stop motors
 def stop_motors():
     motor_a.stop()
@@ -27,10 +35,22 @@ try:
     print("Moving forward...")
     move_forward(0.5)  # Adjust speed as necessary
 
-    while True:
-        print(f"Encoder A position: {encoder_a.value}")  # Read encoder A value
-        print(f"Encoder B position: {encoder_b.value}")  # Read encoder B value (if used)
-        time.sleep(0.1)
+    # Run forward for a certain duration (e.g., 5 seconds)
+    time.sleep(5)
+
+    print("Moving backward...")
+    move_backward(0.5)  # Adjust speed as necessary
+
+    # Run backward for a certain duration (e.g., 5 seconds)
+    time.sleep(5)
+
+    # Stop motors
+    stop_motors()
+
+    # Read encoder values while stopped
+    print("Encoder readings while stopped:")
+    print(f"Encoder A position: {encoder_a.value}")  # Read encoder A value
+    print(f"Encoder B position: {encoder_b.value}")  # Read encoder B value (if used)
 
 except KeyboardInterrupt:
     print("Stopping motors...")
@@ -39,3 +59,5 @@ except KeyboardInterrupt:
 finally:
     # Cleanup code (if necessary)
     print("Cleaning up GPIO...")
+
+   
