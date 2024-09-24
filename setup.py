@@ -1,12 +1,16 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 package_name = 'autonomous_vehicle'
 
 setup(
     name=package_name,
-    version='0.0.1',
-    packages=[package_name],
-    install_requires=['setuptools'],
+    version='0.1.0',  # Updated version
+    packages=find_packages(),  # Automatically find all packages in the directory
+    install_requires=[
+        'setuptools',
+        'gpiozero',  # Include gpiozero as a runtime dependency
+        # 'opencv-python',  # Uncomment if using OpenCV
+    ],
     zip_safe=True,
     maintainer='R.U.N.S',
     maintainer_email='eng23ra0065@dsu.edu.in',
