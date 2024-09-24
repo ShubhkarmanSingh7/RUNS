@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>autonomous_vehicle</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>An autonomous vehicle project using Raspberry Pi and ROS 2.</description>
   
   <maintainer email="eng23ra0065@dsu.edu.in">R.U.N.S</maintainer>
@@ -13,6 +13,11 @@
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
-  <depend>gpiozero</depend>
+
+  <!-- Use exec_depend for runtime dependencies -->
+  <exec_depend>gpiozero</exec_depend>
+  
+  <!-- If you're using OpenCV or other libraries, include them as well -->
+  <!-- <exec_depend>opencv-python</exec_depend> -->
 
 </package>
