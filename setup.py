@@ -16,12 +16,16 @@ setup(
     maintainer_email='eng23ra0065@dsu.edu.in',
     description='An autonomous vehicle project using Raspberry Pi and ROS 2.',
     license='MIT',
-    tests_require=['pytest'],
-    entry_points={
+    tests_require=['pytest'],  # Testing requirements
+    entry_points={  # Console scripts for running nodes
         'console_scripts': [
             'motor_control = autonomous_vehicle.motor_control:main',
             'lidar_node = autonomous_vehicle.lidar_node:main',
             'camera_node = autonomous_vehicle.camera_node:main',
         ],
     },
+    extras_require={  # Optional dependencies
+        'opencv': ['opencv-python'],  # Optional: OpenCV support
+    },
 )
+
