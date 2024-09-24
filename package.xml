@@ -16,8 +16,11 @@
 
   <!-- Use exec_depend for runtime dependencies -->
   <exec_depend>gpiozero</exec_depend>
-  
-  <!-- If you're using OpenCV or other libraries, include them as well -->
-  <!-- <exec_depend>opencv-python</exec_depend> -->
+  <exec_depend>opencv-python</exec_depend>  <!-- Uncomment if using OpenCV -->
+
+  <!-- Optional: Add test dependencies -->
+  <test_depend>ament_lint</test_depend>
+  <test_depend>ament_cmake_gtest</test_depend>
 
 </package>
+
