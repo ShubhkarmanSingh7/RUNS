@@ -3,16 +3,18 @@
 This project implements an autonomous vehicle using ROS 2 Jazzy Jalisco on a Raspberry Pi 5. The vehicle is equipped with TT20 N motors, encoders, LIDAR for obstacle detection, and a camera for visual processing.
 
 ## Project Structure
-autonomous_vehicle/
-├── autonomous_vehicle/
-│ ├── motor_control.py # Controls the motors and reads encoder values.
-│ ├── lidar_node.py # Handles LIDAR data publishing.
-│ ├── camera_node.py # Captures images from the camera.
-│ ├── init.py # Package initialization.
-│ ├── CMakeLists.txt # Build configuration for ROS.
-│ ├── package.xml # Package metadata and dependencies.
-│ └── setup.py # Python package setup.
-└── README.md # Project overview and instructions.
+runs/
+├── launch/
+│   └── robot_launch.py
+├── src/
+│   ├── lidar_node.py
+│   ├── motor_control.py
+│   └── camera_node.py
+├── urdf/
+│   └── car.urdf
+├── package.xml
+└── setup.py
+
 
 ## Requirements
 
