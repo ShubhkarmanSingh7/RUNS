@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>autonomous_vehicle</name>
+  <name>runs</name>
   <version>0.1.0</version>
   <description>An autonomous vehicle project using Raspberry Pi and ROS 2.</description>
   
