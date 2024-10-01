@@ -12,10 +12,9 @@ ament_python_install_package(${PROJECT_NAME})
 
 # Install Python executables
 install(PROGRAMS
-  scripts/camera_node.py
-  scripts/lidar_node.py
-  scripts/motor_control_node.py
-  scripts/gpio_node.py
+  src/camera_node.py
+  src/lidar_node.py
+  src/motor_control_node.py
   DESTINATION lib/${PROJECT_NAME})
 
 # Install launch files
