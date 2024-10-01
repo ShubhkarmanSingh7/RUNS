@@ -17,10 +17,7 @@
   <!-- Use exec_depend for runtime dependencies -->
   <exec_depend>gpiozero</exec_depend>
   <exec_depend>opencv-python</exec_depend>  <!-- Uncomment if using OpenCV -->
-
-  <!-- Optional: Add test dependencies -->
-  <test_depend>ament_lint</test_depend>
-  <test_depend>ament_cmake_gtest</test_depend>
-
+   <exec_depend>ros2launch</exec_depend>
+  
 </package>
 
