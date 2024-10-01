@@ -7,21 +7,15 @@ find_package(rclpy REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 
-# Add executables
-add_executable(camera_node src/camera_node.py)
-ament_target_dependencies(camera_node rclpy sensor_msgs)
+# Install Python modules
+ament_python_install_package(${PROJECT_NAME})
 
-add_executable(lidar_node src/lidar_node.py)
-ament_target_dependencies(lidar_node rclpy sensor_msgs)
-
-add_executable(motor_control src/motor_control.py)
-ament_target_dependencies(motor_control_node rclpy std_msgs)
-
-# Install executables
-install(TARGETS
-  camera_node
-  lidar_node
-  motor_control
+# Install Python executables
+install(PROGRAMS
+  scripts/camera_node.py
+  scripts/lidar_node.py
+  scripts/motor_control_node.py
+  scripts/gpio_node.py
   DESTINATION lib/${PROJECT_NAME})
 
 # Install launch files
